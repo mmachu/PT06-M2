@@ -1,17 +1,20 @@
 // Conteindo del Home
-
+@import "./mixins.less";
+@import "./variables.less";
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
+  }
 
+  .banner {
+    border-radius: 10px;
+    margin-top: 10px;
   }
 
   .music-images {
@@ -58,6 +61,10 @@
       }
 
       .btn {
+        .btn-style(10px, fit-content );
+      }
+      .btn:hover {
+        cursor: pointer;
       }
     }
 
@@ -66,9 +73,46 @@
       margin-left: 4%;
 
       img {
-        width: 100%;
+        width: @allWidth;
         height: auto;
         border-radius: 10px;
+      }
+    }
+  }
+}
+@media @phone {
+  .tecnologia {
+    display: none;
+  }
+  .ondas {
+    display: none;
+  }
+  .home {
+    .banner {
+      padding: 0px 10px 0px 10px;
+      width: @allWidth;
+      border-radius: 20px;
+    }
+    .music-images img {
+      width: @allWidth;
+    }
+    .actual {
+      flex-direction: column-reverse;
+      padding: 0px;
+      margin-top: 20px;
+      .actual-text {
+        width: @allWidth;
+        padding: 15px;
+        .btn {
+          .btn-style(20px, @allWidth );
+          text-align: center;
+        }
+      }
+      .actual-img {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding: 10px;
       }
     }
   }

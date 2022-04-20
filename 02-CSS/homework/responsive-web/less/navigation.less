@@ -1,1 +1,44 @@
 // Código de Nav acá
+@import "./variables.less";
+
+@fontFamily: "Russo One", sans-serif;
+
+.nav {
+  background-color: #e3e3e3;
+}
+
+.navTitle {
+  display: flex;
+  width: @allWidth;
+  font-size: 30px;
+  color: @navFontColor;
+  font-family: @fontFamily;
+  justify-content: center;
+  padding: 20px 0px 10px 0px;
+}
+
+.navMenu {
+  display: flex;
+  color: #203f5a;
+  justify-content: center;
+}
+
+.navMenu div {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 100;
+  margin: 0px 15px 15px 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media @phone {
+  .navTitle {
+    width: @allWidth;
+  }
+  .navMenu div {
+    font-size: 12px;
+    margin: 5px 5px 15px 5px;
+  }
+}
