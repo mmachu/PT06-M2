@@ -1,10 +1,23 @@
 // Código de Nav acá
 @import "./variables.less";
-
+@import "./mixins.less";
 @fontFamily: "Russo One", sans-serif;
 
 .nav {
   background-color: #e3e3e3;
+  position: fixed;
+  top: 0;
+  width: @allWidth;
+  opacity: 0.9;
+}
+
+@keyframes slow-fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .navTitle {
@@ -15,18 +28,20 @@
   font-family: @fontFamily;
   justify-content: center;
   padding: 20px 0px 10px 0px;
+  animation-name: slow-fade-in;
+  animation-duration: 4s;
 }
 
 .navMenu {
   display: flex;
-  color: #203f5a;
+  color: #183044;
   justify-content: center;
 }
 
 .navMenu div {
   display: inline-block;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bold;
   margin: 0px 15px 15px 15px;
   &:hover {
     cursor: pointer;

@@ -1,6 +1,16 @@
 // Conteindo del Home
 @import "./mixins.less";
 @import "./variables.less";
+
+@keyframes turn-green {
+  from {
+    background-color: #23293b;
+  }
+  to {
+    background-color: rgb(35, 128, 35);
+  }
+}
+
 .home {
   .intro {
     h2 {
@@ -65,6 +75,9 @@
       }
       .btn:hover {
         cursor: pointer;
+        background-color: rgb(35, 128, 35);
+        animation-name: turn-green;
+        animation-duration: 1s;
       }
     }
 
@@ -82,10 +95,10 @@
 }
 @media @phone {
   .tecnologia {
-    display: none;
+    .hide();
   }
   .ondas {
-    display: none;
+    .hide();
   }
   .home {
     .banner {

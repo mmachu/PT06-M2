@@ -134,7 +134,7 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   color: #5e6164;
 }
 h1,
@@ -142,7 +142,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   color: #23293b;
 }
 h2 {
@@ -158,10 +158,22 @@ p {
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  margin: 90px auto 0px auto;
 }
 .nav {
   background-color: #e3e3e3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+}
+@keyframes slow-fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 .navTitle {
   display: flex;
@@ -171,16 +183,18 @@ p {
   font-family: "Russo One", sans-serif;
   justify-content: center;
   padding: 20px 0px 10px 0px;
+  animation-name: slow-fade-in;
+  animation-duration: 4s;
 }
 .navMenu {
   display: flex;
-  color: #203f5a;
+  color: #183044;
   justify-content: center;
 }
 .navMenu div {
   display: inline-block;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bold;
   margin: 0px 15px 15px 15px;
 }
 .navMenu div:hover {
@@ -204,10 +218,19 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 @media (max-width: 500px) {
   footer {
     margin: 0px 10px 5px 10px;
+  }
+}
+@keyframes turn-green {
+  from {
+    background-color: #23293b;
+  }
+  to {
+    background-color: #238023;
   }
 }
 .home .intro h2 {
@@ -266,6 +289,9 @@ footer {
 }
 .home .actual .actual-text .btn:hover {
   cursor: pointer;
+  background-color: #238023;
+  animation-name: turn-green;
+  animation-duration: 1s;
 }
 .home .actual .actual-img {
   width: 46%;
@@ -315,4 +341,14 @@ footer {
     margin: 0px;
     padding: 10px;
   }
+}
+.myContainerClass {
+  max-width: 800px;
+  width: 100%;
+  margin: 90px auto 0px auto;
+  display: flex;
+  justify-content: center;
+}
+.myContainerClass .label {
+  font-size: 20px;
 }
