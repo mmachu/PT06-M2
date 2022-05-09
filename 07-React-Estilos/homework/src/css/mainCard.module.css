@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 45vh;
+}
+
+.card {
+  font-weight: 400;
+  width: 700px;
+  height: 15rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-top: 12.5vh;
+  transition: width 1s, height 1s, background-color 1s;
+}
+
+.card:hover {
+  width: 750px;
+  height: 16rem;
+  background-color: rgba(93, 152, 250, 0.5);
+}
+
+.close {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 15%;
+  width: 100%;
+}
+
+.closeButton {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: rgba(140, 32, 32, 0.4);
+}
+
+.city {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+}
+
+.weatherContainer {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 15% - 20%);
+}
+
+.min {
+  width: 33.3%;
+  height: 100%;
+}
+.max {
+  width: 33.3%;
+  height: 100%;
+}
+.weatherIcon {
+  display: flex;
+  justify-content: center;
+  width: 33.33%;
+  height: 100%;
+}
+
+.split {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.minMaxTitle {
+  margin-top: 10px;
+}
+
+.iconImg {
+  width: 100px;
+  height: 100px;
+}
